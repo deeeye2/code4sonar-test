@@ -1,6 +1,6 @@
-FROM openjdk:8-jdk-alpine
+FROM openjdk:8
 EXPOSE 8082
-ADD petclinic.war app.war
-ENTRYPOINT ["java", "-Dserver.port=8082", "-jar", "/app.war"]
+ADD petclinic.war petclinic.war
+ENTRYPOINT ["java","-jar","/petclinic.war"]
 
 
